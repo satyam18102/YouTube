@@ -1,4 +1,4 @@
-// import * as React from 'react';
+import './Content.css'
 import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -33,7 +33,7 @@ function Media(props) {
   const { loading = false } = props;
 
   return (
-    <Grid container wrap="nowrap">
+    <Grid container wrap="nowrap" className='fex' row='2' coloumn='2'>
       {(loading ? Array.from(new Array(3)) : data).map((item, index) => (
         <Box key={index} sx={{ width: 410, marginRight: 0.5, my: 5 }}>
           {item ? (

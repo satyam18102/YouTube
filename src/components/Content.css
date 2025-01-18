@@ -1,0 +1,6 @@
+@media screen and (max-width: 600px) {
+    .fex{
+        display: block !important;
+        margin-left: 3rem !important;
+    }
+  }
