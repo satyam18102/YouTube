@@ -1,4 +1,5 @@
 import './Dashboard.css'
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import { createTheme } from '@mui/material/styles';
@@ -23,6 +24,7 @@ import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import PlaylistAddOutlinedIcon from '@mui/icons-material/PlaylistAddOutlined';
 import ContentCutOutlinedIcon from '@mui/icons-material/ContentCutOutlined';
 import Login from './Login'
+import Content from './Content'
 
 const NAVIGATION = [
   {
@@ -121,13 +123,14 @@ function DemoPageContent() {
   return (
     <Box
       sx={{
-        py: 6,
+        // py: 6,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         textAlign: 'center',
       }}
     >
+      <Content/>
     </Box>
   );
 }
@@ -195,8 +198,15 @@ DemoPageContent.propTypes = {
 
 function Dashboard(props) {
   const { window } = props;
+  const [pathname, setPathname] = React.useState('/home');
 
-  const router = useDemoRouter('/home');
+  const router = React.useMemo(() => {
+    return {
+      pathname,
+      searchParams: new URLSearchParams(),
+      navigate: (path) => setPathname(String(path)),
+    };
+  }, [pathname]);
 
   // Remove this const when copying and pasting into your project.
   const demoWindow = window !== undefined ? window() : undefined;
@@ -216,6 +226,7 @@ function Dashboard(props) {
       window={demoWindow}
       >
       <DashboardLayout
+      defaultSidebarCollapsed
         slots={{
           // appTitle: CustomAppTitle,
           toolbarActions: ToolbarActionsSearch,
@@ -223,7 +234,7 @@ function Dashboard(props) {
         }}
         className='nat'
       >
-        {/* <DemoPageContent pathname={router.pathname} /> */}
+        <DemoPageContent pathname={router.pathname} />
       </DashboardLayout>
     </AppProvider>
     // preview-end
