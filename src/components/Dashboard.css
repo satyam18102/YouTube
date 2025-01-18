@@ -9,6 +9,19 @@
     width: 30px;
 }
 .nat{
-    background-color: aqua !important;
     width: 50% !important;
 }
+@media screen and (max-width: 480px) {
+    .center{
+        width: 5rem;
+        margin-right: 0rem;
+        justify-content: center !important;
+    }
+  }
+  @media screen and (max-width: 1300px) {
+    .center{
+        width: 35rem;
+        margin-right: 9rem;
+        justify-content: center !important;
+    }
+  }
