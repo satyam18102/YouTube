@@ -18,7 +18,7 @@
         justify-content: center !important;
     }
   }
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1300px) and (min-width: 480px) {
     .center{
         width: 35rem;
         margin-right: 9rem;
