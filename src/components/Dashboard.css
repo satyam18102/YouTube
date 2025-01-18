@@ -23,5 +23,6 @@
         width: 35rem;
         margin-right: 9rem;
         justify-content: center !important;
+        align-items: center;
     }
   }
