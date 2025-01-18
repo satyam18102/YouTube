@@ -11,7 +11,7 @@
 .nat{
     width: 50% !important;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .center{
         width: 5rem;
         margin-right: 0rem;
