@@ -1,0 +1,14 @@
+.center{
+    width: 55rem;
+    margin-right: 9rem;
+    justify-content: center !important;
+}
+.ho{
+    margin-top: 0.7rem;
+    height: 20px;
+    width: 30px;
+}
+.nat{
+    background-color: aqua !important;
+    width: 50% !important;
+}
