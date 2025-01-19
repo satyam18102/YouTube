@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import { createTheme } from '@mui/material/styles';
 import { AppProvider } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
-import { useDemoRouter } from '@toolpad/core/internal';
 import HomeSharpIcon from '@mui/icons-material/HomeSharp';
 import Stack from '@mui/material/Stack';
 import SearchIcon from '@mui/icons-material/Search';
