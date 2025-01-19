@@ -1,7 +1,7 @@
 @media screen and (max-width: 600px) {
     .fex{
         display: block !important;
-        margin-right: -3rem !important;
+        margin-right: -2rem !important;
     }
   }
   .m{
@@ -13,5 +13,8 @@
 .radius:hover{
     border-radius: 0 !important;
     transition: 0.1s;
-    opacity: 0.9 !important;
+    opacity: 0.8 !important;
+}
+.fex{
+  margin-bottom: -3rem !important;
 }

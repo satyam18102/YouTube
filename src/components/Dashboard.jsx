@@ -80,6 +80,20 @@ const NAVIGATION = [
 ];
 
 const demoTheme = createTheme({
+  typography: {
+    fontFamily: [
+      'Roboto',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+  },
   cssVariables: {
     colorSchemeSelector: 'data-toolpad-color-scheme',
   },
@@ -219,6 +233,8 @@ function Dashboard(props) {
         logo: <img src="/youtube.png" alt="MUI logo" className='ho' />,
         title: 'YouTube',
         homeUrl: '/home',
+        fontFamily:'Roboto',
+        
       }}
       router={router}
       theme={demoTheme}
