@@ -76,7 +76,7 @@ function Media(props) {
               className='radius'
             />
           ) : (
-            <Skeleton variant="rectangular" className='spe' width={400} height={248} animation='wave'sx={{borderRadius:3,cursor:'pointer',}}/>
+            <Skeleton variant="rectangular" className='spe m' width={400} height={248} animation='wave'sx={{borderRadius:3,cursor:'pointer',}}/>
           )}
           {item ? (
             <Box sx={{ pr: 2 }}>
@@ -123,7 +123,7 @@ function Media2(prop) {
   return (
     <Grid container wrap="nowrap" className='fex' row='2' coloumn='2'>
       {(load ? Array.from(new Array(3)) : data2).map((item, index) => (
-        <Box key={index} sx={{ width: 420, marginRight: 2, my: 5 }}>
+        <Box key={index} className='m' sx={{ width: 420, marginRight: 2, my: 5 }}>
           {item ? (
             <img
               style={{ width: 397, height: 223,borderRadius:12, cursor:'pointer',}}
