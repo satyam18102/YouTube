@@ -32,8 +32,8 @@ export default function Login() {
 
   return (
     <React.Fragment>
-      <Button variant="outlined" className='br' onClick={handleClickOpen}>
-        <AccountCircleIcon/> &nbsp;<h1>Login</h1>
+      <Button variant="outlined" className='br' sx={{textTransform: 'capitalize'}} onClick={handleClickOpen}>
+        <AccountCircleIcon/> &nbsp;<h1>Signin</h1>
       </Button>
       <BootstrapDialog
         onClose={handleClose}

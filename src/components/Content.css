@@ -4,6 +4,14 @@
         margin-right: -3rem !important;
     }
   }
+  .m{
+    margin-top: -0.3rem !important;
+  }
 .spe{
     animation-duration: 1s !important;
 }  
+.radius:hover{
+    border-radius: 0 !important;
+    transition: 0.1s;
+    opacity: 0.9 !important;
+}
