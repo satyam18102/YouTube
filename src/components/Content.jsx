@@ -39,15 +39,15 @@ function Media(props) {
   return (
     <Grid container wrap="nowrap" className='fex' row='2' coloumn='2'>
       {(loading ? Array.from(new Array(3)) : data).map((item, index) => (
-        <Box key={index} sx={{ width: 410, marginRight: 2, my: 5 }}>
+        <Box key={index} sx={{ width: 420, marginRight: 2, my: 5 }}>
           {item ? (
             <img
-              style={{ width: 400, height: 248,borderRadius:6, }}
+              style={{ width: 400, height: 248,borderRadius:12, cursor:'pointer'}}
               alt={item.title}
               src={item.src}
             />
           ) : (
-            <Skeleton variant="rectangular" className='spe' width={400} height={248} animation='wave'sx={{borderRadius:2,}}/>
+            <Skeleton variant="rectangular" className='spe' width={400} height={248} animation='wave'sx={{borderRadius:3,cursor:'pointer'}}/>
           )}
           {item ? (
             <Box sx={{ pr: 2 }}>
@@ -61,14 +61,14 @@ function Media(props) {
               </Typography>
                 </div>
                 <div className='ml-3 mt-2'>
-              <Typography gutterBottom variant="body2" sx={{textAlign:'start'}}>
+              <Typography gutterBottom variant="body2" sx={{textAlign:'start',cursor:'pointer'}}>
                 {item.title}
               </Typography>
               <Typography
                 variant="caption"
-                sx={{ display: 'block', color: 'text.secondary',textAlign:'start' }}
+                sx={{ display: 'block', color: 'text.secondary',textAlign:'start',cursor:'pointer', }}
               >
-                {item.channel}
+                <a>{item.channel}</a>
               </Typography>
               <Typography variant="caption" sx={{ color: 'text.secondary',textAlign:'start',float:'left' }}>
                 {`${item.views} • ${item.createdAt}`}
