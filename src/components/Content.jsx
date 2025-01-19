@@ -19,9 +19,9 @@ const data = [
     src: 'https://i.ytimg.com/vi/_Uu12zY01ts/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCpX6Jan2rxrCAZxJYDXppTP4MoQA',
     title: 'Queen - Greatest Hits',
     channel: 'Queen Official',
-    icon:<Avatar alt="Queen Official" src="/static/images/avatar/1.jpg" />,
-    views: '40M views',
-    createdAt: '3 years ago',
+    icon:<Avatar alt="Queen Official" src="/static/images/avatar/2.jpg" />,
+    views: '20M views',
+    createdAt: '1 years ago',
   },
   {
     src: 'https://i.ytimg.com/vi/kkLk2XWMBf8/hqdefault.jpg?sqp=-oaymwEYCNIBEHZIVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLB4GZTFu1Ju2EPPPXnhMZtFVvYBaw',
