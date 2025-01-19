@@ -47,7 +47,7 @@ function Media(props) {
               src={item.src}
             />
           ) : (
-            <Skeleton variant="rectangular" className='spe' width={400} height={248} animation='wave'sx={{borderRadius:3,cursor:'pointer'}}/>
+            <Skeleton variant="rectangular" className='spe' width={400} height={248} animation='wave'sx={{borderRadius:3,cursor:'pointer',}}/>
           )}
           {item ? (
             <Box sx={{ pr: 2 }}>
@@ -66,7 +66,8 @@ function Media(props) {
               </Typography>
               <Typography
                 variant="caption"
-                sx={{ display: 'block', color: 'text.secondary',textAlign:'start',cursor:'pointer', }}
+                className='a'
+                sx={{ display: 'block', color: 'text.secondary',textAlign:'start',cursor:'pointer','&:hover': { color: 'primary.main' }}}
               >
                 <a>{item.channel}</a>
               </Typography>
