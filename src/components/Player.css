@@ -10,7 +10,9 @@
 @media screen and (max-width: 600px) {
     .play{
         margin-right: 0 !important;
-        width: 24rem !important;
-        height: 20rem !important;
+    }
+    .player{
+        width: 25rem !important;
+        height: 22rem !important;
     }
   }
