@@ -66,6 +66,35 @@ const data2 = [
     id:'7QqX1m5hT80',
   },
 ];
+const data3 = [
+  {
+    src: 'https://i.ytimg.com/vi/Vn-daczc2Ko/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAQSSNiIWYMFm1YbEh-znwc7dzxaQ',
+    title: 'Memes Of Panchayat Ft. Sachiv Ji, Prahlad, Vikas, Vinod, Bhushan, Pradhan Ji | Prime Video India',
+    channel: 'Prime Video India',
+    icon:<Avatar alt="P" src="https://yt3.ggpht.com/FGojdRe4_BcDNQZiYuHAddq7Jxbq_YtuR6rgAidn47bvCSodJgR39gN9HcB0zmuwftHmUuM1XsI=s88-c-k-c0x00ffffff-no-rj" />,
+    views: '27.5M views',
+    createdAt: '2 years ago',
+    id:'Vn-daczc2Ko',
+  },
+  {
+    src: 'https://i.ytimg.com/vi/6JVuyccDz-E/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCiFgM_E_oSA3uemLOS1mPIpRTnpQ',
+    title: 'Taarak Mehta Ka Ooltah Chashmah - Full Episode 613 - 25th March, 2020',
+    channel: 'Alright Shots',
+    icon:<Avatar alt="A" src="https://yt3.ggpht.com/ELNFKyPWT_TgC7QPnkY-pwiHv_StTmAmq9dyl_B2DA4HxfTqHOy2E5ZdM8UNLxdUOZT_rsu775E=s88-c-k-c0x00ffffff-no-rj" />,
+    views: '2.6M views',
+    createdAt: '6 Months ago',
+    id:'6JVuyccDz-E',
+  },
+  {
+    src: 'https://i.ytimg.com/vi/n_E3bLYuQBo/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBjwUjlfM3fp2ZL6NkGsikKKILmiA',
+    title: "INDIA'S GOT LATENT | EP 12 ft.​⁠​⁠ Rakhi Sawant @ashishsolanki_1 @ComedianMaheepSingh ​⁠",
+    channel: 'Samay Raina',
+    icon:<Avatar alt="S" src="https://yt3.ggpht.com/ytc/AIdro_msUercxyRDA0NKQsaIS0IXMTCF_GId4oiTzQYyKbP4AI4=s88-c-k-c0x00ffffff-no-rj"/>,
+    views: '35M views',
+    createdAt: '3 weeks ago',
+    id:'n_E3bLYuQBo',
+  },
+];
 
 
 function Media(props) {
@@ -100,7 +129,7 @@ function Media(props) {
                 </div>
                 <div className='ml-3' >
                 <Link to={"/video/"+item.id}> 
-                <Typography gutterBottom variant="body2" sx={{textAlign:'start',cursor:'pointer',fontSize:17,fontWeight:500}}>
+                <Typography gutterBottom variant="body2" className='pointer' sx={{textAlign:'start',cursor:'pointer',fontSize:17,fontWeight:500,}}>
                   {item.title}
                 </Typography>
                 </Link>
@@ -187,6 +216,65 @@ function Media2(prop) {
     </Grid>
   );
 }
+function Media3(prop) {
+  const { load = false } = prop;
+
+  return (
+    <Grid container wrap="nowrap" className='fex' row='2' coloumn='2'>
+      {(load ? Array.from(new Array(3)) : data3).map((item, index) => (
+        <Box key={index} className='m' sx={{ width: 420, marginRight: 2, my: 5 }}>
+          {item ? (
+          <Link to={"/video/"+item.id}> 
+            <img
+              style={{ width: 397, height: 223,borderRadius:12, cursor:'pointer',}}
+              alt={item.title}
+              src={item.src}
+              className='radius'
+            />
+            </Link>
+          ) : (
+            <Skeleton variant="rectangular" className='spe' width={400} height={248} animation='wave'sx={{borderRadius:3,cursor:'pointer',}}/>
+          )}
+          {item ? (
+            <Box sx={{ pr: 2 }}>
+              <div className='flex mt-3'>
+                <div>
+              <Typography
+                  variant="caption"
+                  sx={{ display: 'block', color: 'text.secondary',textAlign:'start' }}
+                >
+                  {item.icon}
+                </Typography>
+                </div>
+                <div className='ml-3' >
+                <Link to={"/video/"+item.id}> 
+                <Typography gutterBottom variant="body2" sx={{textAlign:'start',cursor:'pointer',fontSize:17,fontWeight:500,}}>
+                  {item.title}
+                </Typography>
+                </Link>
+                <Typography
+                  variant="caption"
+                  className='a'
+                  sx={{ display: 'block', color: 'text.secondary',textAlign:'start',fontSize:14,cursor:'pointer','&:hover': { color: 'primary.main' }}}
+                >
+                  <a>{item.channel}</a>
+                </Typography>
+                <Typography variant="caption" sx={{ color: 'text.secondary',fontSize:14,textAlign:'start',float:'left' }}>
+                  {`${item.views} • ${item.createdAt}`}
+                </Typography>
+                </div></div>
+            </Box>
+          ) : (
+            <Box sx={{ pt: 0.5 }}>
+              <Skeleton width='80%' />
+              <Skeleton width="60%" />
+            </Box>
+          )}
+        </Box>
+      ))}
+    </Grid>
+  );
+}
 
 
 Media.propTypes = {
@@ -198,6 +286,7 @@ export default function Content() {
     <Box sx={{ overflow: 'hidden' }}>
       <Media />
       <Media2/>
+      <Media3/>
       <Media loading />
     </Box>
   );

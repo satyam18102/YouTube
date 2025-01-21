@@ -14,7 +14,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import IconButton from '@mui/material/IconButton';
 import TextField from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
-import { Hidden, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { ThemeSwitcher } from '@toolpad/core/DashboardLayout';
 import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
 import { SiYoutubeshorts } from "react-icons/si";
@@ -29,14 +29,14 @@ import Login from './Login'
 
 const NAVIGATION = [
   {
-    segment: 'home',
-    title: 'Home',
-    icon: <HomeSharpIcon/>,
+    segment: '/',
+    title: <Link to={'/'}>Home</Link>,
+    icon:<Link to={'/'}><HomeSharpIcon/></Link> ,
   },
   {
-    segment: 'shorts',
-    title: 'Shorts',
-    icon: <SiYoutubeshorts />,
+    segment: '/',
+    title: <Link to={'/'}>Shorts</Link>,
+    icon: <Link to={'/'}><SiYoutubeshorts /></Link>,
   },
   {
     segment: 'subscription',

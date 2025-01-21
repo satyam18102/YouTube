@@ -7,6 +7,9 @@
       margin-top: 4rem !important;
     }
   }
+  .pointer{
+    cursor: pointer !important;
+  }
 .spe{
     animation-duration: 1s !important;
 }  
