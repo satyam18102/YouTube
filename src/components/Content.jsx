@@ -15,6 +15,7 @@ const data = [
     icon:<Avatar alt="Badshah" src="https://yt3.ggpht.com/PtjQRphUor6aqUNtz98owoTLqB375TbAPWP9m78XnQKqYRFDL3gwAgVb1Crky10-1jdtOCMwzvE=s88-c-k-c0x00ffffff-no-rj" />,
     views: '396k views',
     createdAt: 'a week ago',
+    id:'1OAjeECW90E?si=jbpZ1TCLfcgwq1Oa',
   },
   {
     src: '/tvf.png',
@@ -23,6 +24,7 @@ const data = [
     icon:<Avatar alt="T" src="https://yt3.ggpht.com/ytc/AIdro_lMaG31N6SdaMEkagNlbn8Q7Ta3NV7eC2xhqpGF_MHoc-0=s88-c-k-c0x00ffffff-no-rj" />,
     views: '20M views',
     createdAt: '1 years ago',
+    id:'1OAjeECW90E?si=jbpZ1TCLfcgwq1Oa',
   },
   {
     src: '/russia.png',
@@ -31,6 +33,7 @@ const data = [
     icon:<Avatar alt="V" src="https://yt3.ggpht.com/3pvdhxAJoQgPaWCWsLnVkJLMQbVcZjITuwv3dDX3ToYcD5aEerO3oQ2ZIJJtXH8wRIBsK6L1Y0k=s88-c-k-c0x00ffffff-no-rj"/>,
     views: '130M views',
     createdAt: '10 months ago',
+    id:'1OAjeECW90E?si=jbpZ1TCLfcgwq1Oa',
   },
 ];
 
@@ -70,7 +73,7 @@ function Media(props) {
       {(loading ? Array.from(new Array(3)) : data).map((item, index) => (
         <Box key={index} sx={{ width: 420, marginRight: 2, my: 5 }}>
           {item ? (
-            <Link to={"/home"}> 
+            <Link to={"/video"}> 
             <img
               style={{ width: 397, height: 223,borderRadius:12, cursor:'pointer',}}
               alt={item.title}
