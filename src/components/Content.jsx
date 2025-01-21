@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
 import Avatar from '@mui/material/Avatar';
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -69,12 +70,14 @@ function Media(props) {
       {(loading ? Array.from(new Array(3)) : data).map((item, index) => (
         <Box key={index} sx={{ width: 420, marginRight: 2, my: 5 }}>
           {item ? (
+            <Link to={"/home"}> 
             <img
               style={{ width: 397, height: 223,borderRadius:12, cursor:'pointer',}}
               alt={item.title}
               src={item.src}
               className='radius'
             />
+            </Link>
           ) : (
             <Skeleton variant="rectangular" className='spe m' width={400} height={248} animation='wave'sx={{borderRadius:3,cursor:'pointer',}}/>
           )}
