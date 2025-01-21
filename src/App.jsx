@@ -10,8 +10,8 @@ function App() {
     <Router>
     <div className=''>
       <Routes>
-        <Route path="/" element={<Dashboard/>}></Route>
-        <Route path="/video" element={<Player/>}></Route>
+        <Route path="/" Component={Dashboard}></Route>
+        <Route path="/video/:id" Component={Player}></Route>
       </Routes>
     </div>
     </Router>

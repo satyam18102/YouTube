@@ -1,0 +1,16 @@
+.player{
+    width: 868px !important;
+    height: 468px !important;
+    margin-top: 2rem !important;
+}
+.play{
+    margin-right: 32rem !important;
+    border-radius: 800rem !important;
+}
+@media screen and (max-width: 600px) {
+    .play{
+        margin-right: 0 !important;
+        width: 24rem !important;
+        height: 20rem !important;
+    }
+  }

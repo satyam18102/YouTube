@@ -15,7 +15,7 @@ const data = [
     icon:<Avatar alt="Badshah" src="https://yt3.ggpht.com/PtjQRphUor6aqUNtz98owoTLqB375TbAPWP9m78XnQKqYRFDL3gwAgVb1Crky10-1jdtOCMwzvE=s88-c-k-c0x00ffffff-no-rj" />,
     views: '396k views',
     createdAt: 'a week ago',
-    id:'1OAjeECW90E?si=jbpZ1TCLfcgwq1Oa',
+    id:'JRKk7gxcpMc',
   },
   {
     src: '/tvf.png',
@@ -24,7 +24,7 @@ const data = [
     icon:<Avatar alt="T" src="https://yt3.ggpht.com/ytc/AIdro_lMaG31N6SdaMEkagNlbn8Q7Ta3NV7eC2xhqpGF_MHoc-0=s88-c-k-c0x00ffffff-no-rj" />,
     views: '20M views',
     createdAt: '1 years ago',
-    id:'1OAjeECW90E?si=jbpZ1TCLfcgwq1Oa',
+    id:'drjNeIZL994',
   },
   {
     src: '/russia.png',
@@ -33,7 +33,7 @@ const data = [
     icon:<Avatar alt="V" src="https://yt3.ggpht.com/3pvdhxAJoQgPaWCWsLnVkJLMQbVcZjITuwv3dDX3ToYcD5aEerO3oQ2ZIJJtXH8wRIBsK6L1Y0k=s88-c-k-c0x00ffffff-no-rj"/>,
     views: '130M views',
     createdAt: '10 months ago',
-    id:'1OAjeECW90E?si=jbpZ1TCLfcgwq1Oa',
+    id:'1OAjeECW90E',
   },
 ];
 
@@ -45,6 +45,7 @@ const data2 = [
     icon:<Avatar alt="T-series" src="https://yt3.ggpht.com/XE7Iq8jvJ07ptMc-HxZR_V-2XgXCb0i06i4E_dypl7xSR655WXaQeglfqNuEeuwH3oM9RKVodQ=s68-c-k-c0x00ffffff-no-rj" />,
     views: '396k views',
     createdAt: 'a week ago',
+    id:'a-PAcmi5Kas',
   },
   {
     src: 'https://i.ytimg.com/vi/qZId59qml_4/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDxGsDD7U6a7v2XA19ERmHE5TNnYw',
@@ -53,6 +54,7 @@ const data2 = [
     icon:<Avatar alt="S" src="https://yt3.ggpht.com/1DrkG_kzGIIuGVwknM-x0_S62gcCmEoLTr1L524IWeXb0nSuw5XXb58AyA7RVR_tvNJv09pASQ=s88-c-k-c0x00ffffff-no-rj" />,
     views: '20M views',
     createdAt: '1 years ago',
+    id:'qZId59qml_4',
   },
   {
     src: '/upsc.png',
@@ -61,6 +63,7 @@ const data2 = [
     icon:<Avatar alt="H" src="https://yt3.ggpht.com/_zDjMUVYFvdCkPU5v6XOo_Ls2maFaHNqRM0esbAR_fRj8zlfGUCpr9Dkll7a30tmQ7Y2__zeQQ=s68-c-k-c0x00ffffff-no-rj"/>,
     views: '27M views',
     createdAt: '10 months ago',
+    id:'7QqX1m5hT80',
   },
 ];
 
@@ -73,7 +76,7 @@ function Media(props) {
       {(loading ? Array.from(new Array(3)) : data).map((item, index) => (
         <Box key={index} sx={{ width: 420, marginRight: 2, my: 5 }}>
           {item ? (
-            <Link to={"/video"}> 
+            <Link to={"/video/"+item.id}> 
             <img
               style={{ width: 397, height: 223,borderRadius:12, cursor:'pointer',}}
               alt={item.title}
@@ -96,9 +99,11 @@ function Media(props) {
                 </Typography>
                 </div>
                 <div className='ml-3' >
+                <Link to={"/video/"+item.id}> 
                 <Typography gutterBottom variant="body2" sx={{textAlign:'start',cursor:'pointer',fontSize:17,fontWeight:500}}>
                   {item.title}
                 </Typography>
+                </Link>
                 <Typography
                   variant="caption"
                   className='a'
@@ -131,12 +136,14 @@ function Media2(prop) {
       {(load ? Array.from(new Array(3)) : data2).map((item, index) => (
         <Box key={index} className='m' sx={{ width: 420, marginRight: 2, my: 5 }}>
           {item ? (
+          <Link to={"/video/"+item.id}> 
             <img
               style={{ width: 397, height: 223,borderRadius:12, cursor:'pointer',}}
               alt={item.title}
               src={item.src}
               className='radius'
             />
+            </Link>
           ) : (
             <Skeleton variant="rectangular" className='spe' width={400} height={248} animation='wave'sx={{borderRadius:3,cursor:'pointer',}}/>
           )}
@@ -152,9 +159,11 @@ function Media2(prop) {
                 </Typography>
                 </div>
                 <div className='ml-3' >
+                <Link to={"/video/"+item.id}> 
                 <Typography gutterBottom variant="body2" sx={{textAlign:'start',cursor:'pointer',fontSize:17,fontWeight:500,}}>
                   {item.title}
                 </Typography>
+                </Link>
                 <Typography
                   variant="caption"
                   className='a'
